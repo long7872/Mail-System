@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_LEFT" spacing="12" style="-fx-padding:20;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.AuthController">
+    <children>
+        <Label style="-fx-font-size:18px; -fx-font-weight:600;" text="Gmail Authentication" />
+        <GridPane hgap="10.0" vgap="8">
+            <columnConstraints>
+            <ColumnConstraints percentWidth="30" />
+            <ColumnConstraints percentWidth="70" />
+        </columnConstraints>
+
+        <children>
+            <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="emailField" promptText="you@gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <PasswordField fx:id="passwordField" promptText="********" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="For Register:" GridPane.rowIndex="3" />
+            <Separator GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Label text="Confirm password:" GridPane.rowIndex="5" />
+            <PasswordField fx:id="confirmPasswordField" promptText="********" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+            <CheckBox fx:id="rememberCheck" text="Keep me signed in" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            </children>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <children>
+                <Button fx:id="registerBtn" onAction="#onRegister" text="Register" />
+                <Button fx:id="loginBtn" onAction="#onLogin" text="Login" />
+            </children>
+        </HBox>
+      
+    </children>
+</VBox>
